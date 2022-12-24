@@ -104,19 +104,77 @@ else{
 //Задача 3: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным. 
 //          Обязательна проверка на ввод числа <1 и >7
 
-Console.Write("Введите число от 1 до 7 включительно: ");
-int number = int.Parse(Console.ReadLine()!);
-if((number < 1) || (number > 7))
-{
-    Console.WriteLine("Введено некорректное число");
-}   
-else if((number == 6) || (number == 7))
-{
-    Console.WriteLine($"{number} -> да");
-} 
-else
-{
-    Console.WriteLine($"{number} -> нет");
-}  
+// Console.Write("Введите число от 1 до 7 включительно: ");
+// int number = int.Parse(Console.ReadLine()!);
+// if((number < 1) || (number > 7))
+// {
+//     Console.WriteLine("Введено некорректное число");
+// }   
+// else if((number == 6) || (number == 7))
+// {
+//     Console.WriteLine($"{number} -> да");
+// } 
+// else
+// {
+//     Console.WriteLine($"{number} -> нет");
+// }  
 
 //=====================================================================================================================================
+
+//                                              Урок 3.
+
+//                                             Задача 1:
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// Проверка на пятизначность обязательна.
+
+Console.Write("Введите пятизначное число: ");
+int num = int.Parse(Console.ReadLine()!);
+string num1 = num.ToString();
+
+if(num < 10000 || num > 99999){
+    Console.WriteLine("Ошибка!!! Это не пятизначное число");
+}
+else if(num1[0] == num1[4] && num1[1] == num1[3]){
+    Console.WriteLine($"{num} -> да");
+}
+else {
+    Console.WriteLine($"{num} -> нет");
+}
+
+
+//                                              Задача 2:
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// Console.Write("Введите координату X точки A: ");
+// int xa = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите координату Y точки A: ");        //Координаты первой точки
+// int ya = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите координату Z точки A: ");
+// int za = int.Parse(Console.ReadLine()!);
+
+// Console.Write("Введите координату X точки B: ");
+// int xb = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите координату Y точки B: ");        //Координаты второй точки
+// int yb = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите координату Z точки B: ");
+// int zb = int.Parse(Console.ReadLine()!);
+
+// double result = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2) + Math.Pow(zb - za, 2));
+// Console.WriteLine($"Расстояние между точками = {result:f2}");
+
+
+//                                              Задача 3:
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// Console.Write("Введите число: ");
+// int N = int.Parse(Console.ReadLine()!);
+// for(int i = 1; i <= N; i++){
+//     Console.Write($"{Math.Pow(i, 3)} ");
+// }
+
+//=================================================================================================================================
+
+
+
+
+
