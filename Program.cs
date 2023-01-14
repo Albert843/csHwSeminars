@@ -127,19 +127,19 @@ else{
 // Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 // Проверка на пятизначность обязательна.
 
-Console.Write("Введите пятизначное число: ");
-int num = int.Parse(Console.ReadLine()!);
-string num1 = num.ToString();
+// Console.Write("Введите пятизначное число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// string num1 = num.ToString();
 
-if(num < 10000 || num > 99999){
-    Console.WriteLine("Ошибка!!! Это не пятизначное число");
-}
-else if(num1[0] == num1[4] && num1[1] == num1[3]){
-    Console.WriteLine($"{num} -> да");
-}
-else {
-    Console.WriteLine($"{num} -> нет");
-}
+// if(num < 10000 || num > 99999){
+//     Console.WriteLine("Ошибка!!! Это не пятизначное число");
+// }
+// else if(num1[0] == num1[4] && num1[1] == num1[3]){
+//     Console.WriteLine($"{num} -> да");
+// }
+// else {
+//     Console.WriteLine($"{num} -> нет");
+// }
 
 
 //                                              Задача 2:
@@ -174,6 +174,81 @@ else {
 
 //=================================================================================================================================
 
+//                                           Урок 4 (Семинар 4)
+
+//                                              Задача 25: 
+//Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// Console.Write("Введите число A: ");
+// int num = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите степень числа B: ");
+// int pow = int.Parse(Console.ReadLine()!);
+// Console.WriteLine($"{num}, {pow} -> {GetNumInPow(num, pow)}");
+
+// //-----Method-----
+// int GetNumInPow(int number, int power){
+//     int mult = 1;
+//     for (int i = 0; i < power; i++)
+//     {
+//         mult = mult * number; 
+//     }
+//     return mult;
+// }
+
+
+//                                              Задача 27:
+//Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе. либо строки, либо математика
+
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// Console.WriteLine($"{num} -> {GetSumDigits(num)} in Math");
+// string num2 = num.ToString();
+// Console.WriteLine($"{num2} -> {GetSumDigits2(num2)} in Str");
+
+// //-----Method-----Math
+// int GetSumDigits(int number)
+// {
+//     int sum = 0;
+//     int result = 0;
+//     while(number != 0){
+//         result = number % 10;
+//         sum += result; 
+//         number = number /  10;
+//     }
+//     return sum;
+// }
+
+// //-----Method-----String
+// int GetSumDigits2(string number){
+//     int sum = 0;
+//     int count =  number.Length;
+//     int num = Convert.ToInt32(number);
+//     for (int i = 0; i < count; i++)
+//     {
+//         int result = num % 10;
+//         sum += result;
+//         num = num / 10;
+//     }
+//     return sum;
+// }
+
+//                                              Задача 29: 
+//Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран. (числа берете любые)
+
+// int[] arr = GetArray(8);
+// Console.WriteLine($"[{String.Join(',', arr)}]");
+
+// //-----Method-----
+// int[] GetArray(int size){
+//     int[] arr = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         arr[i] = new Random().Next(10, 100);
+//     }
+//     return arr;
+// }
+
+//=================================================================================================================================
 
 
 
