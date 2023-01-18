@@ -250,6 +250,88 @@ else{
 
 //=================================================================================================================================
 
+//                                          Урок 5 (Семинар 5)
+
+//                                              Задача 34: 
+//Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// int[] array = GetArray(4, 100, 1000);
+// Console.Write($"[{String.Join(",", array)}]");
+// Console.WriteLine($" -> {EvenNumberCount(array)}");
+// //-----Метод подсчета количества чётных чисел в массиве-----
+// int EvenNumberCount(int[] array){
+//     int count = 0;
+//     foreach (int el in array)
+//     {
+//         if(el % 2 == 0) count++;
+//     }
+//     return count;
+// }
+// //-----Method-----
+// int[] GetArray(int size, int minValue, int maxValue){
+//     int[] res = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         res[i] = new Random().Next(minValue, maxValue);
+//     }
+//     return res;
+// }
 
 
+//                                               Задача 36: 
+//Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных индексах.
+
+// int[] array = GetArray(4, -100, 100);
+// Console.Write($"[{String.Join(",", array)}]");
+// Console.WriteLine($" -> {OddIndexSum(array)}");
+// //-----Метод нахождения суммы элементов нечетных индексов-----
+// int OddIndexSum(int[] arr){
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if(i % 2 != 0) sum += arr[i];
+//     }
+//     return sum;
+// }
+// //-----Method-----
+// int[] GetArray(int size, int minValue, int maxValue){
+//     int[] res = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         res[i] = new Random().Next(minValue, maxValue);
+//     }
+//     return res;
+// }
+
+
+//                                                  Задача 37: 
+//Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+
+// int[] array = GetArray(5, 1, 10);
+// Console.Write($"[{String.Join(",", array)}] -> ");
+// PairNumMultiplay(array);
+// //-----Метод: произведение пар чисел-----
+// int PairNumMultiplay(int[] arr){
+//     int mult = 1;
+//     int len = arr.Length;
+//     for (int i = 0; i < arr.Length / 2; i++)
+//     {
+//         mult = arr[i] * arr[arr.Length - i - 1];
+//         Console.Write($"{mult} ");
+//     }
+//     if(len % 2 != 0)
+//     Console.Write($"{arr[arr.Length / 2]}");
+//     return 0;
+// }
+// //-----Method-----
+// int[] GetArray(int size, int minValue, int maxValue){
+//     int[] res = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         res[i] = new Random().Next(minValue, maxValue);
+//     }
+//     return res;
+// }
+
+//=================================================================================================================================
 
