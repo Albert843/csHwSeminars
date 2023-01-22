@@ -335,3 +335,51 @@ else{
 
 //=================================================================================================================================
 
+//                                          Урок 6 (Семинар 6)
+
+//                                              Задача 41: 
+//Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел строго больше 0 ввёл пользователь.
+
+// Console.Write("Введите массив любых чисел (через пробел): ");
+// int[] array = Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
+// int count = 0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i] > 0) count++;
+// }
+// Console.WriteLine($"Количество чисел > 0: {count}");
+
+
+//                                              Задача 43: 
+//Написать программу, которая на вход принимает массив из любого количества элементов (не менее 6)в промежутке от 0 до 100, 
+//а на выходе выводит этот же массив, но отсортированный по возрастанию(от меньшего числа к большему).
+
+// int[] array = GetArray(6, 0, 100);
+// Console.WriteLine($"[{String.Join(",", array)}]");
+// Console.WriteLine($"[{String.Join(",", SelectionSort(array))}]");
+
+// //-----Methods-----
+// int[] GetArray(int size, int minValue, int maxValue){
+//     int[] result = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return result;
+// } 
+// int[] SelectionSort(int[] array){
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         int min = i;
+//         for (int j = i + 1; j < array.Length; j++)
+//         {
+//             if(array[j] < array[min]) min = j;
+//         }
+//     int temp = array[i];
+//     array[i] = array[min];
+//     array[min] = temp;
+//     }
+//     return array;
+// }
+
+
