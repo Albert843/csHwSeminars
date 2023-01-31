@@ -505,3 +505,159 @@ else{
 //         Console.Write($"{(sum / count):f1} ");
 //     }
 // }
+
+
+//=================================================================================================================================
+
+//                                          Урок 8 (Семинар 8)
+
+//                                              Задача 54: 
+// Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+
+// int[,] myArray = GetArray(3,4);
+// PrintArray(myArray);
+// Console.WriteLine();
+// SortToMinValue(myArray);
+// PrintArray(myArray);
+// //---------------Methods---------------
+// int[,] GetArray(int m, int n){
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+// void PrintArray(int[,] array){
+//     for (int i = 0; i < array.GetLength(0); i++){
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// void SortToMinValue(int[,] array){
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int l = 0; l < array.GetLength(1); l++)
+//         {
+//             for (int k = 0; k < array.GetLength(1)-1; k++)
+//             {
+//                 if(array[i, k] < array[i, k+1]){
+//                     int temp = array[i, k+1];
+//                     array[i, k+1] = array[i, k];
+//                     array[i, k] = temp;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+//                                              Задача 56: 
+// Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+
+// int[,] myArray = GetArray(3, 4);
+// PrintArray(myArray);
+// GetSumRow(myArray);
+// //---------------Methods---------------
+// int[,] GetArray(int m, int n){
+//     int[,] myArray = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             myArray[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return myArray;
+// }
+// void PrintArray(int[,] array){
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+//  void GetSumRow(int[,] array){
+//     int sum = 0;
+//     int minSum = 0;
+//     int row = 0;
+//     int rowMinSum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         row++;
+//         sum = 0;
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             sum += array[i, j];
+//         }
+//         if(row == 1){
+//             minSum = sum;
+//             rowMinSum = row;
+//         } 
+//         else if(sum < minSum){
+//             minSum = sum;
+//             rowMinSum = row;  
+//         }
+//     }
+//     Console.Write($"Минимальная сумма {minSum} в {rowMinSum} ряду");
+//  }
+    
+
+//                                              Задача 58: 
+// Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+
+// int[,] matrix1 = GetMatrix(2, 2);
+// int[,] matrix2 = GetMatrix(2, 2);
+// int[,] resultMatrix = GetMatrix(2,2);
+// PrintMatrix(matrix1);
+// Console.WriteLine($"---");
+// PrintMatrix(matrix2);
+// MultiplyMatrixes(matrix1, matrix2, resultMatrix);
+// Console.WriteLine("Результат умножения: ");
+// PrintMatrix(resultMatrix);
+// //---------------Methods---------------
+// int[,] GetMatrix(int m, int n){
+//     int[,] matrix = new int[m, n]
+// ;    for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return matrix;
+// }
+// void PrintMatrix(int[,] matrix){
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// int[,] MultiplyMatrixes(int[,] matrix1, int[,] matrix2, int[,] resultMatrix){
+//     for (int i = 0; i < resultMatrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < resultMatrix.GetLength(1); j++)
+//         {
+//             int sum = 0;
+//             for (int k = 0; k < matrix1.GetLength(1); k++)
+//             {
+//                 sum += matrix1[i, k] * matrix2[k, j];
+//             }
+//             resultMatrix[i, j] = sum;
+//         }
+//     }
+//     return resultMatrix;
+// }
