@@ -661,3 +661,53 @@ else{
 //     }
 //     return resultMatrix;
 // }
+
+
+//=================================================================================================================================
+//                                          Урок 9 (Семинар 9)
+
+//                                   Все задачи выполнить с помощью рекурсии
+
+//                                              Задача 64: 
+// Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1.
+
+// Console.Write("Введите число: ");
+// int N = int.Parse(Console.ReadLine()!);
+// Console.WriteLine(GetNumbers(1, N));
+// //---------------Method---------------
+// string GetNumbers(int start, int end){
+//     if(end == start) return end.ToString();
+//     return (end + " " + GetNumbers(start, end - 1));
+// }
+
+
+//                                              Задача 66: 
+// Задайте значение M и N. Напишите программу, которая найдет сумму натуральных элементов в промежутке от M до N.
+
+// Console.Write("Введите число M: ");
+// int M = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите число N: ");
+// int N = int.Parse(Console.ReadLine()!);
+// Console.WriteLine(GetSum(M, N));
+// //---------------Method---------------
+// int GetSum(int start, int end){
+//     if(start == end) return start;
+//     return (start + GetSum(start + 1, end));
+// }
+
+
+//                                              Задача 68: 
+// Напишите программу вычисления функции Аккермана. Даны два неотрицательных числа m и n.
+
+// Console.Write("Введите число m: ");
+// int m = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите число n: ");
+// int n = int.Parse(Console.ReadLine()!);
+// Console.WriteLine(FunctionAkkerman(m, n));
+// //---------------Method---------------
+// int FunctionAkkerman(int m, int n)
+// {
+//   if (m == 0) return n + 1;
+//   else if (n == 0) return FunctionAkkerman(m - 1, 1);
+//   else return FunctionAkkerman(m - 1, FunctionAkkerman(m, n - 1));
+// }
